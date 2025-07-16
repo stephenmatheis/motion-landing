@@ -1,0 +1,32 @@
+.hero {
+    position: absolute;
+    top: 0;
+    right: max(-50vw, -600px);
+    width: 100vw;
+    max-width: 1200px;
+    height: 100vh;
+
+    .squircle {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100vw;
+        max-width: 1200px;
+        height: 100vh;
+        border-radius: 4rem;
+
+        &.foreground {
+            background-color: var(--primary-3);
+            right: -2rem;
+        }
+
+        &.midground {
+            background-color: var(--primary-4);
+            right: -1rem;
+        }
+
+        &.background {
+            background-color: var(--primary-5);
+        }
+    }
+}

@@ -1,0 +1,188 @@
+.page {
+    position: relative;
+    min-height: 100lvh;
+    padding: 2rem;
+    max-width: 1265px;
+    margin: 0 auto;
+
+    header {
+        position: sticky;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        height: 60px;
+        z-index: 100;
+
+        .title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+
+            span {
+                font-size: 1.5rem;
+                font-weight: 600;
+            }
+        }
+
+        nav {
+            ul {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                display: flex;
+                gap: 1rem;
+
+                li {
+                    a {
+                        text-decoration: none;
+                        padding: 0.5rem 1rem;
+                        font-size: 0.875rem;
+                        font-weight: 500;
+
+                        &:hover {
+                            color: var(--primary);
+                        }
+                    }
+                }
+            }
+        }
+
+        .portal {
+            display: flex;
+            align-items: center;
+            border-radius: 48px;
+            padding: 0.25rem;
+            background-color: var(--background-color);
+
+            .avatar {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: var(--primary);
+
+                svg {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    fill: var(--background-color);
+                }
+            }
+
+            span {
+                padding: 0 1rem;
+                color: var(--primary);
+                font-size: 0.875rem;
+                font-weight: 600;
+            }
+        }
+    }
+
+    main {
+        .hero {
+            position: absolute;
+            top: 0;
+            right: -20vw;
+            height: 1074px;
+            width: 885.5px;
+
+            clip-path: url(#clip);
+            transform: rotate(45deg);
+            background-image: linear-gradient(
+                0deg,
+                var(--primary-5) 0%,
+                var(--primary) 100%
+            );
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 25%;
+                left: -12.5%;
+                height: calc(1922px / 2.5);
+                width: calc(2592px / 2.5);
+                transform: rotate(-45deg);
+                background-image: url('/images/hero-3.webp');
+                background-position: center center;
+                background-size: cover;
+            }
+
+            .defs {
+                height: 0px;
+                width: 0px;
+                position: absolute;
+            }
+        }
+
+        .copy {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 3rem;
+            height: calc(100lvh - var(--header-height) - 2rem);
+            padding: 2rem;
+
+            .title {
+                font-size: 4.5rem;
+                font-weight: 700;
+                width: max-content;
+
+                .gradient {
+                    background: linear-gradient(
+                        180deg,
+                        var(--primary) 50%,
+                        var(--color) 100%
+                    );
+                    // background-size: 50%;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+
+            .subtitle {
+                font-size: 1.25rem;
+                font-weight: 400;
+                color: var(--color-medium);
+                width: max-content;
+            }
+
+            .cta {
+                display: flex;
+                align-items: center;
+                border-radius: 52px;
+                padding: 0.25rem;
+                background-color: var(--primary);
+                width: max-content;
+                border: none;
+
+                .arrow {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 44px;
+                    height: 44px;
+                    border-radius: 50%;
+                    background-color: var(--background-color);
+
+                    svg {
+                        width: 22px;
+                        height: 22px;
+                        fill: var(--primary);
+                    }
+                }
+
+                span {
+                    padding: 0 1.5rem;
+                    color: var(--background-color);
+                    font-size: 1.25rem;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}

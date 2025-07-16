@@ -1,0 +1,61 @@
+.services {
+    position: relative;
+    padding-inline: 2rem;
+    max-width: 940px;
+    margin: 15rem auto;
+    z-index: 1;
+
+    @media (max-width: 500px) {
+        margin: 5rem auto;
+    }
+
+    .copy {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 2rem;
+        margin-bottom: 4rem;
+        transition: filter 0.3s ease-in-out;
+
+        &.open {
+            filter: blur(2px) brightness(0.3);
+        }
+
+        h2 {
+            flex: 1;
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1;
+            color: var(--color);
+
+            .highlight {
+                color: var(--primary);
+            }
+        }
+
+        .description {
+            flex: 1;
+            font-size: 1rem;
+        }
+    }
+
+    .bentos {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10rem;
+
+        @media (max-width: 500px) {
+            gap: 5rem;
+        }
+
+        .bento-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 550px;
+        }
+    }
+}

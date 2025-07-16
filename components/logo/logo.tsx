@@ -1,0 +1,20 @@
+import classNames from 'classnames';
+import styles from './logo.module.scss';
+
+export function Logo({ className }: { className?: string }) {
+    return (
+        <svg
+            className={classNames(styles.logo, className)}
+            width="512"
+            height="512"
+            viewBox="0 0 512 512"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+                d="M52.3594 136H76.3594V184H52.3594V136ZM76.3594 184H100.359V232H76.3594V184ZM100.359 232H124.359V280H100.359V232ZM76.3594 280H100.359V328H76.3594V280ZM52.3594 328H76.3594V376H52.3594V328ZM196.453 136H244.453V184H268.453V232H292.453V280H268.453V328H244.453V376H196.453V328H220.453V280H244.453V232H220.453V184H196.453V136ZM436.547 136V184H460.547V232H484.547V280H460.547V328H436.547V376H364.547V328H388.547V280H412.547V232H388.547V184H364.547V136H436.547Z"
+                fill="black"
+            />
+        </svg>
+    );
+}

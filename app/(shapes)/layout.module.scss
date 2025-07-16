@@ -1,0 +1,21 @@
+.page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    main {
+        position: relative;
+        transition: background-color 0.3s ease-in-out;
+
+        &.open {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        @media (max-width: 500px) {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+    }
+}

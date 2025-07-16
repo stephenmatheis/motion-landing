@@ -1,0 +1,13 @@
+.landing {
+    position: relative;
+    height: calc(100svh - var(--header-height) - 1rem);
+    min-height: 600px;
+    max-height: 800px;
+    width: 100%;
+
+    @media (max-width: 500px) {
+        height: calc(100svh - var(--header-height));
+        min-height: unset;
+        overflow: hidden;
+    }
+}

@@ -1,0 +1,170 @@
+.scale {
+    --height: 600px;
+
+    position: relative;
+    // width: 720px;
+    width: 100%;
+    height: var(--height);
+    margin: 0 auto;
+    border-radius: 16px;
+    overflow: hidden;
+
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.05),
+        0 8px 16px rgba(0, 0, 0, 0.05), 0 32px 64px rgba(0, 0, 0, 0.125);
+
+    .browser-container {
+        position: absolute;
+        top: calc(var(--height) / 2);
+        left: -50%;
+        box-shadow: none;
+        margin-top: 0;
+        margin-bottom: 0;
+        width: 100%;
+        height: var(--height);
+
+        scale: (2);
+    }
+}
+
+.browser-container {
+    --tab-color: #d3e2fd;
+    --window-url-color: #edf2fa;
+    --window-button-color: #c0c0c0;
+    --red: #fe5f58;
+    --orange: #ffbc2e;
+    --green: #29c73f;
+
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    isolation: isolate;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.05),
+        0 8px 16px rgba(0, 0, 0, 0.05), 0 32px 64px rgba(0, 0, 0, 0.125);
+
+    .browser-header {
+        background: var(--tab-color);
+        border-radius: 7px 7px 0 0;
+
+        .browser-controls {
+            display: flex;
+            padding-inline: 16px;
+            gap: 16px;
+            height: 2.25rem;
+
+            .browser-buttons {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+
+                .button {
+                    width: 0.75rem;
+                    height: 0.75rem;
+                    border-radius: 50%;
+
+                    &.red {
+                        background-color: var(--red);
+                    }
+
+                    &.orange {
+                        background-color: var(--orange);
+                    }
+
+                    &.green {
+                        background-color: var(--green);
+                    }
+                }
+            }
+
+            .browser-title {
+                align-self: flex-end;
+                position: relative;
+                align-items: center;
+                min-width: 0;
+                height: calc(100% - 8px);
+                font-size: 0.75rem;
+                border-radius: 8px 8px 0 0;
+                background-color: var(--window-background-color);
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                user-select: none;
+                display: flex;
+                padding-inline: 16px;
+
+                .title-icon {
+                    position: absolute;
+                    bottom: 0;
+                    width: 8px;
+                    height: 8px;
+                    color: var(--window-background-color);
+
+                    &.left {
+                        left: 0;
+                        transform: translateX(-100%);
+                    }
+
+                    &.right {
+                        right: 0;
+                        transform: translateX(100%);
+                    }
+                }
+
+                span {
+                    max-width: 100%;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    min-width: 0;
+                }
+            }
+        }
+
+        .browser-navigation {
+            display: flex;
+            align-items: center;
+            padding-right: 16px;
+            height: 2.25rem;
+            background-color: var(--window-background-color);
+            border-radius: 8px 8px 0 0;
+
+            .nav-button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 2rem;
+                height: 2rem;
+                color: var(--window-button-color);
+            }
+
+            .nav-url {
+                flex: 1 1;
+                display: flex;
+                align-items: center;
+                min-width: 0;
+                height: 1.5rem;
+                margin-left: 16px;
+                border-radius: 1000px;
+                font-size: 0.75rem;
+                padding-inline: 10px;
+                background-color: var(--window-url-color);
+
+                span {
+                    display: block;
+                    max-width: 100%;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+
+    .browser-content-container {
+        overflow: clip;
+
+        .browser-content {
+            background-color: var(--background-color);
+            color: var(--color);
+        }
+    }
+}

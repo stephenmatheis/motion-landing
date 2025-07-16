@@ -1,0 +1,113 @@
+.header {
+    position: sticky;
+    top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--header-height);
+    padding: 0 2rem;
+    z-index: 100;
+
+    @media (max-width: 500px) {
+        padding: 0 1rem;
+    }
+
+    .divider {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 100vw;
+        height: var(--header-height);
+        transform: translateX(-50%);
+        background-color: var(--primary-9);
+        border-bottom: solid 1px var(--primary-8);
+        z-index: -1;
+    }
+
+    .title {
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+
+            img {
+                path {
+                    fill: red;
+                }
+
+                @media (max-width: 500px) {
+                    width: 26px;
+                    height: 26px;
+                }
+            }
+        }
+    }
+
+    .nav {
+        @media (max-width: 500px) {
+            display: none;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+
+            @media (max-width: 1024px) {
+                gap: 0.5rem;
+            }
+
+            @media (max-width: 500px) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            li {
+                a {
+                    display: inline-block;
+                    text-decoration: none;
+                    padding: 0.5rem 1rem;
+                    font-size: 1rem;
+                    font-weight: 500;
+
+                    &:hover {
+                        color: var(--primary);
+                    }
+
+                    @media (max-width: 1024px) {
+                        padding: 0.25rem 0.5rem;
+                    }
+
+                    @media (max-width: 500px) {
+                        font-size: 1.25rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .portal {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background-color: var(--primary);
+
+        svg {
+            width: 1.5rem;
+            height: 1.5rem;
+            fill: var(--background-color);
+        }
+
+        @media (max-width: 500px) {
+            display: none;
+        }
+    }
+}
